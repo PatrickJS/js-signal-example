@@ -41,10 +41,12 @@ state._subs.push((newValue) => {
   textNode.textContent = newValue;
 });
 
-// Test it by changing window.myRealValue
-state.value = 'New Value'; // The text node will update to "New Value"
+// update value
+state.value = 'New Value';
+// The text node will update to "New Value"
 
 const inputEl = document.getElementById('input-id');
+
 window.updateFn = () => {
   console.log(arguments);
   const value = inputEl.value;
